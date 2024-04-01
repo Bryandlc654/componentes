@@ -1,0 +1,107 @@
+.about {
+    width: 100%;
+    padding: 6rem 1rem;
+}
+
+.about__content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about__content .about__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about__statistics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.about__statistics .about__statistic {
+    background-color: #111F3B;
+    padding: 2rem 1rem;
+    color: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.about__statistics .about__statistic .about__statistic-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__statistic-title {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.about__statistics .about__statistic .about__statistic-info .about__statistic-icon svg{
+    color: #FC076F;
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.about__statistic-value{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about__statistic-change{
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+.about__statistic-change svg{
+    color: #FC076F;
+    rotate: 315deg;
+}
+
+@media screen and (min-width:768px) {
+    .about {
+        padding: 6rem 1rem;
+    }
+
+    .about__statistics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    .about__statistics .about__statistic {
+        padding: 2rem 1rem;
+    }
+    
+}
+
+@media screen and (min-width:1024px) {
+    .about {
+        padding: 6rem 1rem;
+    }
+
+    .about__statistics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .about__statistics .about__statistic {
+        padding: 2rem;
+    }
+    
+}
+@media screen and (min-width:1200px) {
+    .about {
+        padding: 6rem 0rem;
+    }
+}

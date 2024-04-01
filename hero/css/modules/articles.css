@@ -1,57 +1,26 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Inter", sans-serif;
-}
-
-:root {
-    --primary-color: #000;
-    --secondary-color: #00d07e;
-    --text-color: #1d2b35;
-}
-
-body {
-    font-family: "Manrope", sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
 .seo-section {
     width: 100%;
     padding-top: 8rem;
+    margin-bottom: 6rem;
 }
 
 .seo-section__container {
-    display: flex;
-    width: 100%;
-    max-width: 570px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 1rem;
+    max-width: 560px;
     margin: 0 auto;
-    gap: 2.25rem;
-    padding: 0 1.5rem;
-    flex-direction: column;
 }
 
-.seo-section__header {
-    width: 100%;
+.article1 {
+    grid-row: 1 / 4;
 }
 
 .seo-section__header a {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-}
-
-.seo-section__header .seo-section__header-image {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+    gap: 1rem;
 }
 
 .seo-section__header-title {
@@ -64,6 +33,19 @@ a {
 .seo-section__header .seo-section__author {
     display: flex;
     align-items: center;
+    gap: .5rem;
+}
+
+.seo-section__header .seo-section__author p {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.seo-section__header .seo-section__header-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .seo-section__header .seo-section__author .seo-section__author-image {
@@ -71,18 +53,9 @@ a {
     width: 2rem;
 }
 
-.seo-section__header .seo-section__author .seo-section__author-text {
-    display: flex;
-    gap: 4px;
-    margin-left: 10px;
-}
-
-.seo-section__articles {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 4rem;
+.seo-section__article .seo-section__article-link .seo-section__article-image {
+    width: 10rem;
+    border-radius: 8px;
 }
 
 .seo-section__article .seo-section__article-link {
@@ -105,20 +78,10 @@ a {
     color: var(--secondary-color);
 }
 
-
-
 @media screen and (min-width:768px) {
     .seo-section__container {
-        max-width: 1200px;
-        flex-direction: row;
-    }
-
-    .seo-section__articles {
-        width: 50%;
-    }
-
-    .seo-section__header {
-        width: 50%;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1120px;
     }
 }
 
