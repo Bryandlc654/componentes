@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --skyblue: #b7d5fc;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--skyblue);
+    display: flex;
+    align-items: center;
+}
+
+.banner__content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+.banner__testimonial-container {
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner__testimonial {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    animation: slide 10s infinite; /* Cambia el tiempo aquí según tu preferencia */
+}
+
+.banner__title {
+    color: #207DE9;
+    font-size: 0.85rem;
+}
+
+.banner__testimonial-text {
+    color: #083A74;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.banner__testimonial-container:before {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    content: "";
+    background: linear-gradient(90deg, #B7D5FC 0%, #B7D5FC 37.93%, transparent 100%);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

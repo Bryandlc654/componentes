@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #8b3dff;
+    --text-color: #0d1216db;
+    --background-gray: #f2f3f5;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.hero {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.hero__content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 6rem;
+    padding: 5rem 0;
+    align-items: center;
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.hero__subtitle {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.hero__description {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.hero__cta {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    gap: 1rem;
+    align-items: center;
+}
+
+.button {
+    padding: .8rem 1.25rem;
+    width: 100%;
+    border-radius: .4rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: .85rem;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    transition: background-color .25s;
+}
+
+.btn-primary:hover {
+    background-color: #6710e9;
+}
+
+.btn-gray {
+    background-color: var(--background-gray);
+    color: #000;
+    transition: background-color .25s;
+}
+
+.btn-gray:hover {
+    background-color: #dbdbdb;
+}
+
+.hero__image {
+    position: relative;
+}
+
+.hero__image img {
+    /*     width:16rem;
+ */
+    object-fit: cover;
+    width: 100%;
+}
+
+.hero__features {
+    position: absolute;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    left: -2rem;
+    top: 15%;
+    align-items: flex-start;
+    gap: .8rem;
+}
+
+.hero__feature {
+    padding: 12px 20px;
+    border-radius: 48px;
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(6px);
+    font-size: .6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.hero__testimonial {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero__testimonial p {
+    color: #11171d99;
+    display: none;
+}
+
+.hero__testimonial-images{
+    width: 100%;
+    display: flex;
+}
+
+.hero__testimonial-images div{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.hero__testimonial-images img {
+    height: 20px;
+    object-fit: contain;
+    filter: saturate(0) brightness(.7) contrast(3);
+    margin: 0 auto;
+}
+
+@media screen and (min-width:480px) {
+    .hero__testimonial p {
+        display: block;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .hero__features {
+        top: 30%;
+        gap: 1rem;
+    }
+
+    .hero__feature {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .hero__testimonial-images {
+        grid-column-gap: 6rem;
+    }
+}
+
+@media screen and (min-width:896px) {
+    .hero__content {
+        flex-direction: row;
+    }
+
+    .hero__text {
+        text-align: start;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__description {
+        font-size: 1.3rem;
+    }
+
+    .hero__cta {
+        flex-direction: row;
+    }
+
+    .button {
+        width: auto;
+        text-align: center;
+    }
+
+    .hero__features {
+        top: 10%;
+        left: -4rem;
+        gap: .5rem;
+    }
+
+    .hero__feature {
+        padding: .5rem .8rem;
+        font-size: .5rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .hero__image img {
+        width: 24rem;
+    }
+
+    .hero__feature {
+        font-size: .8rem;
+    }
+
+    .hero__features {
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .hero__testimonial {
+        flex-direction: row;
+    }
+}
